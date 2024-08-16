@@ -7,6 +7,8 @@ curr_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
 
 # Define the directory where old files are stored
 old_files_dir = os.path.join(curr_dir, "old_files")
+if not os.path.exists(old_files_dir):
+    os.makedirs(old_files_dir)
 old_files = os.listdir(old_files_dir)  # Get the list of files
 
 # Define the starting name for renaming
